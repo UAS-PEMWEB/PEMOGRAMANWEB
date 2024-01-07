@@ -68,7 +68,6 @@
                                             <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable"
                                                 role="document">
                                                 <div class="modal-content" style="max-height: max-content; overflow: hidden;">
-
                                                     <div class="modal-header">
                                                         <div class="d-flex justify-content-between align-items-center"
                                                             style="width : 100%;">
