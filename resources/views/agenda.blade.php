@@ -87,7 +87,6 @@ Agenda
                                                 }}</a></li>
                                         @endforeach
                                         <li><a href="{{ route('agenda.index') }}">Lihat Semua</a></li>
-
                                     </ul>
                                 </div>
                             </div>
