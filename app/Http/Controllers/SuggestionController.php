@@ -16,7 +16,7 @@ class SuggestionController extends Controller
         ]);
     }
 
-    function destroy($id) 
+    function destroy($id)
     {
         $data = Suggestion::find($id);
         $data->delete();
@@ -24,7 +24,8 @@ class SuggestionController extends Controller
         return redirect('/admin/suggestions');
     }
 
-    function store(Request $request) {
+    function store(Request $request)
+    {
         $validatedData = $request->validate([
             'name' => 'required|max:255',
             'email' => 'required|email',
@@ -32,9 +33,9 @@ class SuggestionController extends Controller
             'phone_number' => 'required',
             'message' => 'required',
         ]);
-    
+
         Suggestion::create($validatedData);
-    
+
         Alert::success('SUCCESS', 'Kritik dan Saran berhasil terkirim');
         return redirect('/');
     }
