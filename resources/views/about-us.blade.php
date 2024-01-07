@@ -14,7 +14,6 @@
     @endcomponent
 
     <div class="content p-0">
-
         <!-- About -->
         <div class="about-sec">
             <div class="container">
