@@ -12,7 +12,11 @@ class Gallery extends Model
     protected $table = 'galleries';
 
     protected $fillable = [
-        'title', 'detail', 'types_id', 'url_file', 'user_id',
+        'title',
+        'detail',
+        'types_id',
+        'url_file',
+        'user_id',
     ];
 
     protected static function boot()
@@ -27,7 +31,7 @@ class Gallery extends Model
             });
         }
     }
-    
+
     public function scopeFilter($query, $filters)
     {
         if (!empty($filters['search'])) {
