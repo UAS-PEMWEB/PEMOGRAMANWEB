@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
@@ -16,14 +17,16 @@ class GalleryController extends Controller
         $this->FirebaseMethods = $FirebaseMethods;
     }
 
-    function index() {
+    function index()
+    {
         $data = Gallery::latest()->filter(request(['search']))->paginate(5)->withQueryString();
         return view('admin.pages.galleries.index', [
             'data' => $data
         ]);
     }
 
-    function create() {
+    function create()
+    {
         $types = Type::where('name', 'foto')->orWhere('name', 'video')->get();
         return view('admin.pages.galleries.create', compact('types'));
     }
@@ -42,7 +45,8 @@ class GalleryController extends Controller
         return redirect('/admin/galleries');
     }
 
-    function edit($id) {
+    function edit($id)
+    {
         $data = Gallery::find($id);
         $types = Type::all();
         return view('admin.pages.galleries.edit', [
@@ -51,7 +55,8 @@ class GalleryController extends Controller
         ]);
     }
 
-    function destroy($id) {
+    function destroy($id)
+    {
         $data = Gallery::find($id);
         $fileName = $this->FirebaseMethods->extractNameFromUrl($data->url_file);
         $this->FirebaseMethods->deleteFile($fileName);
@@ -60,7 +65,8 @@ class GalleryController extends Controller
         return redirect('/admin/galleries');
     }
 
-    function update(Request $request, $id) {
+    function update(Request $request, $id)
+    {
         $data = Gallery::find($id);
         if ($request->file('filegallery')) {
             $validatedData = $request->validate([
@@ -73,35 +79,35 @@ class GalleryController extends Controller
             $this->FirebaseMethods->deleteFile($fileName);
             $validatedData['url_file'] = $this->FirebaseMethods->upload($request->file('filegallery'));
         } else {
-        $validatedData = $request->validate([
-            'title' => 'required|max:255',
-            'detail' => 'nullable',
-            'types_id' => 'required|exists:types,id',
-        ]);
+            $validatedData = $request->validate([
+                'title' => 'required|max:255',
+                'detail' => 'nullable',
+                'types_id' => 'required|exists:types,id',
+            ]);
         }
         $data->update($validatedData);
         Alert::success('SUCCESS', 'Data berhasil diubah');
         return redirect('/admin/galleries');
     }
     public function indexpage(Request $request)
-{
-    $type = $request->input('type');
+    {
+        $type = $request->input('type');
 
-    $galleries = Gallery::latest()
-        ->filterByType($type)
-        ->paginate(8);
+        $galleries = Gallery::latest()
+            ->filterByType($type)
+            ->paginate(8);
 
-    $arus = Gallery::latest()
-        ->with('type')
-        ->whereHas('type', function ($query) {
-            $query->where('name', 'arus');
-        })
-        ->filter(request(['search']))
-        ->paginate(5);
+        $arus = Gallery::latest()
+            ->with('type')
+            ->whereHas('type', function ($query) {
+                $query->where('name', 'arus');
+            })
+            ->filter(request(['search']))
+            ->paginate(5);
 
-    return view('galeri', [
-        'galleries' => $galleries,
-        'arus' => $arus
-    ]);
-}
+        return view('galeri', [
+            'galleries' => $galleries,
+            'arus' => $arus
+        ]);
+    }
 }
