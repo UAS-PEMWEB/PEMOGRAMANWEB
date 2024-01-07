@@ -51,7 +51,6 @@ Agenda
                             <!-- /Blog Post -->
                             @endforeach
 
-
                             <!-- Blog Pagination -->
                             <div class="blog-pagination">
                                 {{ $allagendas->links() }}
