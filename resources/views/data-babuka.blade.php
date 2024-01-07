@@ -38,8 +38,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <br>
-                            <br>
+        
                             <label>
                                 <h1>Batimetri</h1>
                             </label>
