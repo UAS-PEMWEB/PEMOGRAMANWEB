@@ -155,7 +155,6 @@
                                     <a  href="data-babuka/{{ $item->id }}" class="btn btn-book">Detail</a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 @endforeach
