@@ -74,7 +74,6 @@
                 </div>
                 @endforeach
                 <!-- /Display Dynamic Data -->
-
                 <!-- Display Pagination Links -->
                 <div class="pagination justify-content-end" style="margin-top: 0px !important;">
                     {{ $dataPegawai->links() }}
