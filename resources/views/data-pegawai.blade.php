@@ -66,7 +66,7 @@
                                 NIP 
                             </div>
                             <div class="col-auto ">
-                             : {{$pegawai->nip}}
+                            : {{$pegawai->nip}}
                             </div>
                         </div>
                         </div>
