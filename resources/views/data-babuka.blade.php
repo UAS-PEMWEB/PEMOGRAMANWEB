@@ -150,7 +150,6 @@
                                             href="data-babuka/kampungkb/{{ $item->village_id }}">
                                             {{ $item->village->name }}</a><span style="font-size: 16px; font-weight: 100"> by {{ $item->name }}</span></div>
                                 </h3>
-
                                 <div class="d-flex justify-content-end">
                                     <a  href="data-babuka/{{ $item->id }}" class="btn btn-book">Detail</a>
                                 </div>
