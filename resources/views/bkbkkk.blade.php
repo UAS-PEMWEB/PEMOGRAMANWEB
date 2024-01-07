@@ -38,6 +38,5 @@
         </div>
     </div>
     <div class="space">
-
 </div>
 @endsection
