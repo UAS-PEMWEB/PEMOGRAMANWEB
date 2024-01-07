@@ -27,7 +27,7 @@ class Gallery extends Model
             });
         }
     }
-
+    
     public function scopeFilter($query, $filters)
     {
         if (!empty($filters['search'])) {
