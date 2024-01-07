@@ -30,7 +30,6 @@
                                             <a href="https://www.arcgis.com/apps/View/index.html?appid=21297dec09494eb1b29c1459c9c27cc5&extent=113.4982,-4.4474,121.0018,-1.0515" target="_blank">
                                                 <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 5px;">Plot Gelombang</button>
                                             </a>
-
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-6">
