@@ -16,6 +16,7 @@
             <div class="row">
                 {{--  @component('components.customermenu')
                 @endcomponent  --}}
+                
                 <div class="col-md-8 col-lg-9"> 
                     <!-- Reviews Sort -->
                     <div class="row">
