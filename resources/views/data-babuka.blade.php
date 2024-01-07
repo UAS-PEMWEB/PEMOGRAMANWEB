@@ -44,7 +44,6 @@
                                 <h1>Batimetri</h1>
                             </label>
                             <div class="offering-five-all">
-
                                 <div class="row">
                                     <div class="col-lg-8 col-md-12">
                                         <div class="offering-five-main">
