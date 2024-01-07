@@ -15,7 +15,7 @@
     <div class="content">
         <div class="container">
             <div class="row justify-content-center p-3">
-                 <!-- Search Form -->
+            <!-- Search Form -->
                  <form action="#" method="GET" class="mb-3" style="max-width: 900px; margin: 0 auto;">
                     <div class="input-group">
                         <input type="text" name="search" class="form-control" placeholder="Search...">
