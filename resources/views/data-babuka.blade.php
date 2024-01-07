@@ -134,7 +134,6 @@
                 </div>
             </form>
             <div class="row">
-
                 @foreach ($data as $item)
                     <div class="col-xl-3 col-md-6">
                         <div class="service-widget servicecontent">
