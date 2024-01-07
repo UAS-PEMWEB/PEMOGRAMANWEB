@@ -23,7 +23,6 @@
                                 <a href="{{ route('artikel.showartikel', ['id' => $artikel->id]) }}"><img class="img-fluid"
                                         src="{{ $artikel->url_file }}" alt="Post Image"></a>
                             </div>
-                            
                             <div class="blog-content">
                                 <div class="blog-category">
                                     <ul>
