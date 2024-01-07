@@ -121,7 +121,6 @@ Agenda
                                 </div>
                             </div>
                             <!-- /Latest Posts -->
-
                         </div>
                         <!-- /Blog Sidebar -->
 
