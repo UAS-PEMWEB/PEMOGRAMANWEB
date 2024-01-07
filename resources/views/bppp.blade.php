@@ -36,7 +36,6 @@
                     </div>
                     <!-- /Reviews Sort -->
                     {{--    --}}
-
                     {{--  @component('components.pagination')
                     @endcomponent  --}}
                 </div>
