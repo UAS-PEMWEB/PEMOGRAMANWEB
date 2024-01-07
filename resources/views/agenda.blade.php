@@ -114,7 +114,7 @@ Agenda
                                                 </h4>
                                                 <p>Kategori: {{$allagenda->category->name }}</p>
                                             </div>
-                                                    </li>
+                                        </li>
                                         @endforeach
                                     </ul>
                                 </div>
