@@ -67,7 +67,6 @@
             </div>
         </section>
         <!-- /Visi Section -->
-
         <!-- Misi Section -->
         <section class="work-section work-bg">			
             <div class="container">
