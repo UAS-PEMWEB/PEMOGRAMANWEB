@@ -39,7 +39,6 @@
                     {{--  @component('components.pagination')
                     @endcomponent  --}}
                 </div>
-
             </div>
 
         </div>
