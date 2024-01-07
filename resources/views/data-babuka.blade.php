@@ -56,7 +56,6 @@
                                             <a href="https://www.arcgis.com/apps/View/index.html?appid=dbf8159e3f29447597ac25d449e35ebf&extent=112.3006,-5.0506,127.3079,1.7431" target="_blank">
                                                 <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 5px;">Plot Batimetri</button>
                                             </a>
-
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-6">
