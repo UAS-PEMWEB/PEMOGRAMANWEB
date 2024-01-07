@@ -39,8 +39,8 @@ class LandingPageController extends Controller
             })
             ->latest()
             ->paginate(1);
-        
-    
+
+
         $dataProduct = Product::latest()->get();
         $galleries = Gallery::latest()
             ->with('type')
@@ -49,9 +49,10 @@ class LandingPageController extends Controller
             })
             ->take(6)
             ->get();
-        
+
         $locations = ListVillage::latest()->get();
-        function removeDuplicateLocations($locations){
+        function removeDuplicateLocations($locations)
+        {
             $uniqueLocations = [];
             foreach ($locations as $location) {
                 if (!in_array($location->location, $uniqueLocations)) {
@@ -68,15 +69,15 @@ class LandingPageController extends Controller
             'products' => $dataProduct,
             'galleries' => $galleries,
             'announcements' => $announcements,
-            'linkterkait' => $linkterkait, 
+            'linkterkait' => $linkterkait,
             'locations' => $locations
         ]);
     }
-    
+
     public function detailPengumuman($id)
     {
-    $announcement = Content::with('category')->find($id);
-    return view('detail-pengumuman', compact('announcement'));
+        $announcement = Content::with('category')->find($id);
+        return view('detail-pengumuman', compact('announcement'));
     }
 
     public function pengumuman()
@@ -88,7 +89,7 @@ class LandingPageController extends Controller
             ->latest()
             ->filter(request(['search']))
             ->paginate(5);
-    
+
         // Use the query builder instance for pagination
         $allannouncementpagination = Content::latest()
             ->with('type')
@@ -97,7 +98,7 @@ class LandingPageController extends Controller
             })
             ->take(5)
             ->get();
-        
+
         // Fetch categories for the sidebar
         $categories = DB::table('contents')
             ->join('categories', 'contents.category_id', '=', 'categories.id')
@@ -106,114 +107,114 @@ class LandingPageController extends Controller
             ->select('categories.*')
             ->distinct()
             ->get();
-    
+
         return view('pengumuman', [
             'allannouncements' => $allannouncements,
             'allannouncementpagination' => $allannouncementpagination,
             'categories' => $categories,
         ]);
     }
-    
+
 
 
     public function agenda()
     {
-    $allagendas = Content::with(['type', 'user'])
-    ->whereHas('type', function ($query) {
-        $query->where('name', 'agenda');
-    })
-    ->latest()
-    ->filter(request(['search']))
-    ->paginate(5);
+        $allagendas = Content::with(['type', 'user'])
+            ->whereHas('type', function ($query) {
+                $query->where('name', 'agenda');
+            })
+            ->latest()
+            ->filter(request(['search']))
+            ->paginate(5);
 
-     // Use the query builder instance for pagination
-     $allagendapagination = Content::latest()
-     ->with('type')
-     ->whereHas('type', function ($query) {
-         $query->where('name', 'agenda');
-     })
-     ->take(5)
-     ->get();
+        // Use the query builder instance for pagination
+        $allagendapagination = Content::latest()
+            ->with('type')
+            ->whereHas('type', function ($query) {
+                $query->where('name', 'agenda');
+            })
+            ->take(5)
+            ->get();
 
-    $categories = DB::table('contents')
-        ->join('categories', 'contents.category_id', '=', 'categories.id')
-        ->join('types', 'contents.type_id', '=', 'types.id')
-        ->where('types.name', 'agenda')
-        ->select('categories.*')
-        ->distinct()
-        ->get();
+        $categories = DB::table('contents')
+            ->join('categories', 'contents.category_id', '=', 'categories.id')
+            ->join('types', 'contents.type_id', '=', 'types.id')
+            ->where('types.name', 'agenda')
+            ->select('categories.*')
+            ->distinct()
+            ->get();
 
-    return view('agenda', [
-        'allagendas' => $allagendas,
-        'allagendapagination' => $allagendapagination,
-        'categories' => $categories,
-    ]);
+        return view('agenda', [
+            'allagendas' => $allagendas,
+            'allagendapagination' => $allagendapagination,
+            'categories' => $categories,
+        ]);
     }
 
     public function detailAgenda($id)
     {
-    $agendases = Content::with('category')->find($id);
-    return view('detail-agenda', compact('agendases'));
+        $agendases = Content::with('category')->find($id);
+        return view('detail-agenda', compact('agendases'));
     }
 
     public function showByCategory($category)
     {
-    $allannouncements = Content::latest()
-        ->with('type')
-        ->whereHas('type', function ($query) {
-            $query->where('name', 'pengumuman');
-        })
-        ->whereHas('category', function ($query) use ($category) {
-            $query->where('name', $category);
-        })
-        ->filter(request(['search']))
-        ->paginate(5);
+        $allannouncements = Content::latest()
+            ->with('type')
+            ->whereHas('type', function ($query) {
+                $query->where('name', 'pengumuman');
+            })
+            ->whereHas('category', function ($query) use ($category) {
+                $query->where('name', $category);
+            })
+            ->filter(request(['search']))
+            ->paginate(5);
 
-    $categories = DB::table('contents')
-        ->join('categories', 'contents.category_id', '=', 'categories.id')
-        ->join('types', 'contents.type_id', '=', 'types.id')
-        ->where('types.name', 'pengumuman')
-        ->select('categories.*')
-        ->distinct()
-        ->get();
+        $categories = DB::table('contents')
+            ->join('categories', 'contents.category_id', '=', 'categories.id')
+            ->join('types', 'contents.type_id', '=', 'types.id')
+            ->where('types.name', 'pengumuman')
+            ->select('categories.*')
+            ->distinct()
+            ->get();
 
-    return view('pengumuman', [
-        'allannouncements' => $allannouncements,
-        'categories' => $categories,
-    ]);
+        return view('pengumuman', [
+            'allannouncements' => $allannouncements,
+            'categories' => $categories,
+        ]);
     }
 
     public function showByAgenda($category)
     {
-    $allagendas = Content::latest()
-        ->with('type')
-        ->whereHas('type', function ($query) {
-            $query->where('name', 'agenda');
-        })
-        ->whereHas('category', function ($query) use ($category) {
-            $query->where('name', $category);
-        })
-        ->filter(request(['search']))
-        ->paginate(5);
+        $allagendas = Content::latest()
+            ->with('type')
+            ->whereHas('type', function ($query) {
+                $query->where('name', 'agenda');
+            })
+            ->whereHas('category', function ($query) use ($category) {
+                $query->where('name', $category);
+            })
+            ->filter(request(['search']))
+            ->paginate(5);
 
-    $categories = DB::table('contents')
-        ->join('categories', 'contents.category_id', '=', 'categories.id')
-        ->join('types', 'contents.type_id', '=', 'types.id')
-        ->where('types.name', 'agenda')
-        ->select('categories.*')
-        ->distinct()
-        ->get();
+        $categories = DB::table('contents')
+            ->join('categories', 'contents.category_id', '=', 'categories.id')
+            ->join('types', 'contents.type_id', '=', 'types.id')
+            ->where('types.name', 'agenda')
+            ->select('categories.*')
+            ->distinct()
+            ->get();
 
-    return view('agenda', [
-        'allagendas' => $allagendas,
-        'categories' => $categories,
-    ]);
+        return view('agenda', [
+            'allagendas' => $allagendas,
+            'categories' => $categories,
+        ]);
     }
 
     public function detailBidang($id)
     {
-    $announcement = Content::with('category')->find($id);
-    return view('detail-pengumuman', compact('announcement'));
+        $announcement = Content::with('category')->find($id);
+        return view('detail-pengumuman', compact('announcement'));
     }
 
     public function BidangDPPKB()
@@ -225,7 +226,7 @@ class LandingPageController extends Controller
             ->latest()
             ->filter(request(['search']))
             ->paginate(5);
-    
+
         // Use the query builder instance for pagination
         $bidangdppkbpagination = Content::latest()
             ->with('type')
@@ -234,12 +235,12 @@ class LandingPageController extends Controller
             })
             ->take(5)
             ->get();
-        
+
         return view('BidangDPPKB', [
             'bidangdppkb' => $bidangdppkb,
             'bidangdppkbpagination' => $bidangdppkbpagination,
         ]);
     }
-    
+
 
 }
