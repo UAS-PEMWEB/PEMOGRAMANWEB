@@ -62,8 +62,6 @@
                                 </div>
                             </div>
 
-
-
                             <!-- Modal -->
                             <div class="modal fade" id="kontakModal" tabindex="-1" role="dialog"
                                             aria-labelledby="kontakModalLabel" aria-hidden="true">
