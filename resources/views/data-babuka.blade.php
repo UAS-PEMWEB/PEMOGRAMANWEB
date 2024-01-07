@@ -46,7 +46,6 @@
                             <div class="offering-five-all">
 
                                 <div class="row">
-
                                     <div class="col-lg-8 col-md-12">
                                         <div class="offering-five-main">
                                             <img src="assets/img/batimetri.png" alt="" style="border-radius: 20px;">
