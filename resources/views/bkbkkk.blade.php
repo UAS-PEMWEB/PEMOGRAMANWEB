@@ -11,6 +11,7 @@
             Bidang Keluarga Berencana Ketahanan dan Kesejahteraan Keluarga
         @endslot
     @endcomponent
+    
     <div class="content">
         <div class="container">
             <div class="row p-3 justify-content-end">
