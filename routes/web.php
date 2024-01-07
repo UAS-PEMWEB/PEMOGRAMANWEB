@@ -112,7 +112,7 @@ Route::middleware('guest')->group(function () {
         return view('dokumen');
     })->name('dokumen');
 
-    Route::get('/layanan/bkbkkk',  [BkbkkkController::class, 'index'])->name('bkbkkk');
+    Route::get('/layanan/bkbkkk', [BkbkkkController::class, 'index'])->name('bkbkkk');
 
     Route::get('/hub-kami', function () {
         return view('hub-kami');
