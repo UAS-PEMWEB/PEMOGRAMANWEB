@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class ListContentControllrer extends Controller
 {
-    
+
     public function index()
     {
         $artikels = Content::latest()
@@ -17,7 +17,6 @@ class ListContentControllrer extends Controller
         })
         ->filter(request(['search']))
         ->paginate(5);
-
         $artikelpagination = Content::latest()
         ->with('type')
         ->whereHas('type', function ($query) {
