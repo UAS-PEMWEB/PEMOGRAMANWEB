@@ -230,7 +230,7 @@ class LandingPageController extends Controller
             })
             ->take(5)
             ->get();
-    
+
         return view('BidangDPPKB', [
             'bidangdppkb' => $bidangdppkb,
             'bidangdppkbpagination' => $bidangdppkbpagination,
