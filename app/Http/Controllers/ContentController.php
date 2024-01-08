@@ -34,7 +34,6 @@ class ContentController extends Controller
             'data' => $data
         ]);
     }
-
     function store(Request $request)
     {
         $validatedData = $request->validate([

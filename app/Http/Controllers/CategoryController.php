@@ -36,6 +36,7 @@ class CategoryController extends Controller
         Alert::success('SUCCESS', 'Data berhasil ditambahkan');
         return redirect('/admin/categories');
     }
+    
     function edit($id) {
         $data = Category::find($id);
         return view('admin.pages.categories.edit', [
