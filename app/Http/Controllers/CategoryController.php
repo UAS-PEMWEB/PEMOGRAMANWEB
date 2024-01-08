@@ -50,7 +50,6 @@ class CategoryController extends Controller
         Alert::success('SUCCESS', 'Data berhasil dihapus');
         return redirect('/admin/categories');
     }
-
     function update(Request $request, $id) {
         $data = Category::find($id);
         if ($request->file('fileicon')) {
