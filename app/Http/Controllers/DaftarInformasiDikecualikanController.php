@@ -25,7 +25,7 @@ class DaftarInformasiDikecualikanController extends Controller
                 $query->where('name', 'daftar informasi dikecualikan');
             })
             ->first();
-
+            
         return view('daftar-info-kecuali', [
             'data' => $data
         ]);
