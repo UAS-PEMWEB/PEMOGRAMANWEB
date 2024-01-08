@@ -28,7 +28,6 @@ class BpppController extends Controller
             'data' => $bppp
         ]);
     }
-
     function bpppAdmin()
     {
         $categories = Category::all();
