@@ -69,7 +69,7 @@ Categories
                                 <img src="{{ URL::asset('/assets/img/icons/category-03.svg') }}" alt="">
                             </span>
                             <h6><a href="{{ url('search') }}">Electrical</a></h6>
-                        </div>
+</div>
                         <p>22 Services</p>
                     </div>
                 </div>
