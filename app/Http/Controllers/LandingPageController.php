@@ -200,13 +200,13 @@ class LandingPageController extends Controller
         ->select('categories.*')
         ->distinct()
         ->get();
-        
+
     return view('agenda', [
         'allagendas' => $allagendas,
         'categories' => $categories,
     ]);
     }
-
+    
     public function detailBidang($id)
     {
     $announcement = Content::with('category')->find($id);
