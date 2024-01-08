@@ -26,7 +26,6 @@ class AboutUsController extends Controller
             $query->where('name', 'misi');
         })
         ->get();
-
         return view('about-us', [
             'data' => $profile,
             'visi' => $visi,
