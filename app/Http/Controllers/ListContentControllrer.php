@@ -24,7 +24,7 @@ class ListContentControllrer extends Controller
         })
         ->take(5)
         ->get();
-        
+
         $categories = DB::table('contents')
             ->join('categories', 'contents.category_id', '=', 'categories.id')
             ->join('types', 'contents.type_id', '=', 'types.id')
@@ -39,7 +39,6 @@ class ListContentControllrer extends Controller
             'categories' => $categories
         ]);
     }
-
     public function showByCategory($category)
     {
         $artikels = Content::latest()
