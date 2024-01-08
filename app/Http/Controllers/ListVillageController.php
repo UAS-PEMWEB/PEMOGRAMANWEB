@@ -64,7 +64,6 @@ class ListVillageController extends Controller
         return redirect('/admin/list-villages');
     }
 
-    
     /**
      * Display the specified resource.
      */
