@@ -119,7 +119,7 @@ Pengumuman
                                                 <p>Kategori: {{$allannouncement->category->name }}</p>
                                             </div>
                                         </li>
-                                        
+
                                         @endforeach
                                     </ul>
                                 </div>
@@ -134,6 +134,6 @@ Pengumuman
             </div>
         </div>
     </div>
-</div>
+                                                    </div>
 
 @endsection
