@@ -42,7 +42,6 @@ Artikel
                                 </a>
 
                                 @endif
-
                         </p>
                     </div>
                 </div>
