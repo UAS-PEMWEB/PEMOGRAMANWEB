@@ -53,8 +53,9 @@ Categories
                         </div>
                         <p>22 Services</p>
                     </div>
-</div>
+                </div>
             </div>
+
             <div class="col-md-6 col-lg-4 d-flex">
                 <div class="category-card flex-fill">
                     <div class="category-img">
