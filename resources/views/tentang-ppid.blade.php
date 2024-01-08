@@ -11,7 +11,6 @@
             Tentang PPID
         @endslot
     @endcomponent
-
     <div class="content">
         <div class="container">
             <div class="row col-12 p-3">
