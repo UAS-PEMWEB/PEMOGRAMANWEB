@@ -44,7 +44,7 @@
                                 <div class="service-img">
                                     <a href="#" class="gallery-item" data-toggle="modal" data-target="#galleryModal{{$gallery->id}}">
                                     @if (strpos($gallery->url_file, '.mp4') !== false)
-                                         <video  width="100%" height="200px" style="max-width: 100%; width:100%;" controls>
+                                        <video  width="100%" height="200px" style="max-width: 100%; width:100%;" controls>
                                             <source src="{{ $gallery->url_file }}" type="video/mp4">
                                             Your browser does not support the video tag.
                                         </video>
