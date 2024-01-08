@@ -102,7 +102,7 @@ Pengumuman
                                     <h4 class="side-title">Pengumuman Terbaru</h4>
                                     <ul class="latest-posts">
                                         @foreach ($allannouncements as $allannouncement)
-                                        
+
                                         <li>
                                             <div class="post-thumb">
                                                 <a href="{{ route('detail-pengumuman', $allannouncement->id) }}">
@@ -119,7 +119,7 @@ Pengumuman
                                                 <p>Kategori: {{$allannouncement->category->name }}</p>
                                             </div>
                                         </li>
-
+                                        
                                         @endforeach
                                     </ul>
                                 </div>
