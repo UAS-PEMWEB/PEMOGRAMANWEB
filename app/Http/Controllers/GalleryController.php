@@ -97,8 +97,7 @@ class GalleryController extends Controller
             $query->where('name', 'arus');
         })
         ->filter(request(['search']))
-        ->paginate(5);
-        
+        ->paginate(5); 
     return view('galeri', [
         'galleries' => $galleries,
         'arus' => $arus
