@@ -39,7 +39,7 @@ class ListContentControllrer extends Controller
             'categories' => $categories
         ]);
     }
-    
+
     public function showByCategory($category)
     {
         $artikels = Content::latest()
@@ -52,7 +52,7 @@ class ListContentControllrer extends Controller
             })
             ->filter(request(['search']))
             ->paginate(5);
-            
+        
         $artikelpagination = Content::latest()
             ->with('type')
             ->whereHas('type', function ($query) {
