@@ -32,14 +32,13 @@ class LandingPageController extends Controller
                 $query->where('name', 'link terkait');
             })
             ->get();
-            
+
         $announcements = Content::with(['type', 'user'])
             ->whereHas('type', function ($query) {
                 $query->where('name', 'pengumuman');
             })
             ->latest()
             ->paginate(1);
-        
     
         $dataProduct = Product::latest()->get();
         $galleries = Gallery::latest()
