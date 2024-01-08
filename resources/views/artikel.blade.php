@@ -68,7 +68,6 @@ Artikel
                     </div>
                 </div>
                 <!-- /Search -->
-
                 <!-- Categories -->
                 <div class="card category-widget">
                     <div class="card-body">
