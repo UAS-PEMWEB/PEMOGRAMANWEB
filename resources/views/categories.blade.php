@@ -134,7 +134,7 @@ Categories
                         <a href="{{ url('search') }}">
                             <img src="{{ URL::asset('/assets/img/services/service-11.jpg') }}" class="img-fluid" alt="">
                         </a>
-</div>
+                    </div>
                     <div class="category-info">
                         <div class="category-name">
                             <span class="category-icon">
