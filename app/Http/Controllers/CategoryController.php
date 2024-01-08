@@ -23,7 +23,6 @@ class CategoryController extends Controller
     function create() {
         return view('admin.pages.categories.create');
     }
-
     public function store(Request $request)
     {
         $validatedData = $request->validate([
