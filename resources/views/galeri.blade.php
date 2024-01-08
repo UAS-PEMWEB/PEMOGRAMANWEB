@@ -18,7 +18,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-12">
-
                     <!-- Sort -->
                     <div class="row align-items-center">
                     <div class="widget-title">
