@@ -11,7 +11,7 @@ class ExcelController extends Controller
         $request->validate([
             'excel_file' => 'required|mimes:xlsx,xls|max:10240', // Adjust max file size as needed
         ]);
-
+        
         $file = $request->file('excel_file');
         $filename = 'uploaded_file.' . $file->getClientOriginalExtension();
 
