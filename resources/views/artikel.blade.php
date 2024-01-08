@@ -51,7 +51,6 @@ Artikel
                     {{ $artikels->links() }}
                 </div>
             </div>
-
             <!-- Blog Sidebar -->
             <div class="col-lg-4 col-md-12 blog-sidebar theiaStickySidebar">
 
