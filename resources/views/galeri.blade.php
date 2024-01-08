@@ -63,7 +63,6 @@
                                     <div class="">
                                     <a href="#" data-toggle="modal" data-target="#galleryModal{{$gallery->id}}" class="btn btn-book">Detail</a>
                                 </div>
-
                                 <!-- Modal for each gallery -->
                                 <div class="modal fade" id="galleryModal{{$gallery->id}}" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel{{$gallery->id}}" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable" role="document">
