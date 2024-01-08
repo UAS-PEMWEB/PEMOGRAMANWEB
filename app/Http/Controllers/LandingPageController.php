@@ -96,7 +96,7 @@ class LandingPageController extends Controller
             })
             ->take(5)
             ->get();
-        
+    
         // Fetch categories for the sidebar
         $categories = DB::table('contents')
             ->join('categories', 'contents.category_id', '=', 'categories.id')
