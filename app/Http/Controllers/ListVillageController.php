@@ -30,13 +30,14 @@ class ListVillageController extends Controller
             'data'=> $data
         ]);
     }
-    
+
     function FetchDataLokasi($lokasi){
         $data = ListVillage::where('location', $lokasi)->get();
         return response()->json([
             'data'=> $data
         ]);
     }
+    
 
     /**
      * Show the form for creating a new resource.
