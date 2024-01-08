@@ -5,7 +5,7 @@
             Tentang PPID
         @endslot
         @slot('li_1')
-           PPID
+        PPID
         @endslot
         @slot('li_2')
             Tentang PPID
