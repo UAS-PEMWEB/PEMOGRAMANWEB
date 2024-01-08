@@ -18,7 +18,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-12">
-
                     <!-- Sort -->
                     <div class="row align-items-center">
                     <div class="widget-title">
@@ -38,7 +37,6 @@
                         </div>
                     </div>
                     <!-- /Sort -->
-
                     <div class="row">
                     @foreach ($galleries as $gallery)
                         <div class="col-xl-3 col-md-6">
@@ -46,7 +44,7 @@
                                 <div class="service-img">
                                     <a href="#" class="gallery-item" data-toggle="modal" data-target="#galleryModal{{$gallery->id}}">
                                     @if (strpos($gallery->url_file, '.mp4') !== false)
-                                         <video  width="100%" height="200px" style="max-width: 100%; width:100%;" controls>
+                                        <video  width="100%" height="200px" style="max-width: 100%; width:100%;" controls>
                                             <source src="{{ $gallery->url_file }}" type="video/mp4">
                                             Your browser does not support the video tag.
                                         </video>
@@ -65,7 +63,6 @@
                                     <div class="">
                                     <a href="#" data-toggle="modal" data-target="#galleryModal{{$gallery->id}}" class="btn btn-book">Detail</a>
                                 </div>
-
                                 <!-- Modal for each gallery -->
                                 <div class="modal fade" id="galleryModal{{$gallery->id}}" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel{{$gallery->id}}" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable" role="document">
@@ -109,7 +106,6 @@
                                     </div>
                                 </div>  
                                 </div>
-                                
                             </div>
                         </div>
                     @endforeach

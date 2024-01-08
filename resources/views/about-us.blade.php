@@ -14,7 +14,6 @@
     @endcomponent
 
     <div class="content p-0">
-
         <!-- About -->
         <div class="about-sec">
             <div class="container">
@@ -42,7 +41,7 @@
             </div>
         </div>
         <!-- /About -->
-
+        
         <!-- Visi Section -->
         <section class="work-section work-bg">			
             <div class="container">
@@ -68,7 +67,6 @@
             </div>
         </section>
         <!-- /Visi Section -->
-
         <!-- Misi Section -->
         <section class="work-section work-bg">			
             <div class="container">

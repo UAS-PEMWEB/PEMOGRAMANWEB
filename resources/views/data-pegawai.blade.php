@@ -11,12 +11,11 @@
             Data Pegawai DPPKB
         @endslot
     @endcomponent
-
     <div class="content">
         <div class="container">
             <div class="row justify-content-center p-3">
-                 <!-- Search Form -->
-                 <form action="#" method="GET" class="mb-3" style="max-width: 900px; margin: 0 auto;">
+            <!-- Search Form -->
+                <form action="#" method="GET" class="mb-3" style="max-width: 900px; margin: 0 auto;">
                     <div class="input-group">
                         <input type="text" name="search" class="form-control" placeholder="Search...">
                         <button type="submit" class="btn btn-primary">Search</button>
@@ -67,7 +66,7 @@
                                 NIP 
                             </div>
                             <div class="col-auto ">
-                             : {{$pegawai->nip}}
+                            : {{$pegawai->nip}}
                             </div>
                         </div>
                         </div>
@@ -75,7 +74,6 @@
                 </div>
                 @endforeach
                 <!-- /Display Dynamic Data -->
-
                 <!-- Display Pagination Links -->
                 <div class="pagination justify-content-end" style="margin-top: 0px !important;">
                     {{ $dataPegawai->links() }}

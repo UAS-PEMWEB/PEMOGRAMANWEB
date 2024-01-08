@@ -5,13 +5,12 @@
             Tentang PPID
         @endslot
         @slot('li_1')
-           PPID
+        PPID
         @endslot
         @slot('li_2')
             Tentang PPID
         @endslot
     @endcomponent
-
     <div class="content">
         <div class="container">
             <div class="row col-12 p-3">
@@ -25,4 +24,5 @@
             </div>
         </div>
     </div>
+    
 @endsection

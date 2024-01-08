@@ -16,7 +16,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-12">
-                     @foreach($artikels as $artikel) 
+                    @foreach($artikels as $artikel) 
                         <!-- Blog Post -->
                         <div class="blog blog-list">
                             <div class="blog-image">
@@ -41,13 +41,11 @@
                                         </a>
                                         
                                     @endif
-                                
                                 </p>
                             </div>
                         </div>
                         <!-- /Blog Post -->
                     @endforeach
-
                     <div class="blog-pagination float-end mb-5">
                         {{ $artikels->links() }}
                     </div> 
