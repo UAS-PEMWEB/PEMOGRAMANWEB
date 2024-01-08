@@ -50,7 +50,6 @@ Pengumuman
                                                 </div>
                                     </div>
                                 </div>
-
                             </div>
                             <!-- /Blog Post -->
                             @endforeach
