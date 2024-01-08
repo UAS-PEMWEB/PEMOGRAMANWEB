@@ -206,13 +206,12 @@ class LandingPageController extends Controller
         'categories' => $categories,
     ]);
     }
-    
+
     public function detailBidang($id)
     {
     $announcement = Content::with('category')->find($id);
     return view('detail-pengumuman', compact('announcement'));
     }
-
     public function BidangDPPKB()
     {
         $bidangdppkb = Content::with(['type', 'user'])
