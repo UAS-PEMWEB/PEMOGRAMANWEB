@@ -23,14 +23,13 @@ class ListVillageController extends Controller
             'data' => $data
         ]);
     }
-    
+
     function FetchData(){
         $data = ListVillage::all();
         return response()->json([
             'data'=> $data
         ]);
     }
-
     function FetchDataLokasi($lokasi){
         $data = ListVillage::where('location', $lokasi)->get();
         return response()->json([
