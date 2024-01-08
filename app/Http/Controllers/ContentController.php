@@ -68,7 +68,6 @@ class ContentController extends Controller
             'types'=> $types 
         ]);
     }
-
     function update(Request $request, $id)
     {
        
