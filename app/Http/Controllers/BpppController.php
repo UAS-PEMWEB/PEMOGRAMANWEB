@@ -16,7 +16,6 @@ class BpppController extends Controller
     {
         $this->FirebaseMethods = $FirebaseMethods;
     }
-
     function index() {
         $bppp = Content::latest()
             ->with('category')

@@ -20,7 +20,6 @@ class CategoryController extends Controller
             'data' => $data
         ]);
     }
-
     function create() {
         return view('admin.pages.categories.create');
     }
