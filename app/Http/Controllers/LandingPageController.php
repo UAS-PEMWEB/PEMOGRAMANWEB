@@ -59,7 +59,7 @@ class LandingPageController extends Controller
             }
             return $uniqueLocations;
         }
-        
+
         $locations = removeDuplicateLocations($locations);
         return view('index', [
             'carousels' => $dataCarousel,
@@ -71,7 +71,7 @@ class LandingPageController extends Controller
             'locations' => $locations
         ]);
     }
-    
+
     public function detailPengumuman($id)
     {
     $announcement = Content::with('category')->find($id);
