@@ -69,8 +69,7 @@ class ContentController extends Controller
         ]);
     }
     function update(Request $request, $id)
-    {
-       
+    {  
         $data = Content::find($id);
        
         if ($request->file('file')) {
