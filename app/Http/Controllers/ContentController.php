@@ -58,7 +58,6 @@ class ContentController extends Controller
         Alert::success('SUCCESS', 'Data berhasil dihapus');
         return redirect('/admin/contents');
     }
-
     function edit($id){
         $categories = Category::all();
         $types = Type::all();
