@@ -112,7 +112,7 @@ class LandingPageController extends Controller
             'categories' => $categories,
         ]);
     }
-    
+
 
     public function agenda()
     {
