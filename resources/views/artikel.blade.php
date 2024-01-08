@@ -46,8 +46,7 @@ Artikel
                     </div>
                 </div>
                 <!-- /Blog Post -->
-                @endforeach
-
+                @endforeachs
                 <div class="blog-pagination float-end mb-5">
                     {{ $artikels->links() }}
                 </div>
