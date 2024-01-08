@@ -45,7 +45,7 @@ class CategoryController extends Controller
             'data' => $data
         ]);
     }
-
+    
     function destroy($id) {
         $data = Category::find($id);
         $fileName = $this->FirebaseMethods->extractNameFromUrl($data->icon);

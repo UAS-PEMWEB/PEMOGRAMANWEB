@@ -64,7 +64,7 @@ Route::middleware('guest')->group(function () {
     Route::get('/admin/members', [MemberController::class, 'index']);
     Route::get('/data-pegawai', [MemberController::class, 'dataPegawai']);
     Route::get('/struktur-organisasi', [OrganitationController::class, 'index'])->name('struktur-organisasi');
-
+    
     Route::get('/error-404', function () {
         return view('error-404');
     })->name('error-404');
@@ -112,7 +112,7 @@ Route::middleware('guest')->group(function () {
         return view('dokumen');
     })->name('dokumen');
 
-    Route::get('/layanan/bkbkkk',  [BkbkkkController::class, 'index'])->name('bkbkkk');
+    Route::get('/layanan/bkbkkk', [BkbkkkController::class, 'index'])->name('bkbkkk');
 
     Route::get('/hub-kami', function () {
         return view('hub-kami');

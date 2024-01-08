@@ -51,7 +51,6 @@ Agenda
                             <!-- /Blog Post -->
                             @endforeach
 
-
                             <!-- Blog Pagination -->
                             <div class="blog-pagination">
                                 {{ $allagendas->links() }}
@@ -88,7 +87,6 @@ Agenda
                                                 }}</a></li>
                                         @endforeach
                                         <li><a href="{{ route('agenda.index') }}">Lihat Semua</a></li>
-
                                     </ul>
                                 </div>
                             </div>
@@ -117,16 +115,14 @@ Agenda
                                                 <p>Kategori: {{$allagenda->category->name }}</p>
                                             </div>
                                         </li>
-
                                         @endforeach
                                     </ul>
                                 </div>
                             </div>
                             <!-- /Latest Posts -->
-
                         </div>
                         <!-- /Blog Sidebar -->
-
+                        
                     </div>
                 </div>
             </div>
