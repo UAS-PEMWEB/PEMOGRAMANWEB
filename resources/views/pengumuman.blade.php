@@ -126,7 +126,7 @@ Pengumuman
                             </div>
                             <!-- /Latest Posts -->
 
-                        </div>
+                                                    </div>
                         <!-- /Blog Sidebar -->
 
                     </div>
