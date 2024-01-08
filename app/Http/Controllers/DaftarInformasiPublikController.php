@@ -26,7 +26,7 @@ class DaftarInformasiPublikController extends Controller
                 $query->where('name', 'daftar informasi publik');
             })
             ->first();
-
+            
         return view('daftar-info-public', [
             'data' => $data
         ]);
