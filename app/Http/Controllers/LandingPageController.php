@@ -236,6 +236,6 @@ class LandingPageController extends Controller
             'bidangdppkbpagination' => $bidangdppkbpagination,
         ]);
     }
-    
+
 
 }
