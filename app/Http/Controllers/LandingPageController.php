@@ -173,13 +173,13 @@ class LandingPageController extends Controller
         ->select('categories.*')
         ->distinct()
         ->get();
-        
+
     return view('pengumuman', [
         'allannouncements' => $allannouncements,
         'categories' => $categories,
     ]);
     }
-
+    
     public function showByAgenda($category)
     {
     $allagendas = Content::latest()
