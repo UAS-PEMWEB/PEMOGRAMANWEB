@@ -44,4 +44,3 @@ class IndexPageAdminController extends Controller
         ]);
     }
 }
-
