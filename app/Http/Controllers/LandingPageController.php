@@ -48,7 +48,7 @@ class LandingPageController extends Controller
             })
             ->take(6)
             ->get();
-            
+
         $locations = ListVillage::latest()->get();
         function removeDuplicateLocations($locations){
             $uniqueLocations = [];
@@ -59,7 +59,7 @@ class LandingPageController extends Controller
             }
             return $uniqueLocations;
         }
-
+        
         $locations = removeDuplicateLocations($locations);
         return view('index', [
             'carousels' => $dataCarousel,
