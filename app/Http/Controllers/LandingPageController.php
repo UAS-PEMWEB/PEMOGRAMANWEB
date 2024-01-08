@@ -87,7 +87,7 @@ class LandingPageController extends Controller
             ->latest()
             ->filter(request(['search']))
             ->paginate(5);
-    
+
         // Use the query builder instance for pagination
         $allannouncementpagination = Content::latest()
             ->with('type')
