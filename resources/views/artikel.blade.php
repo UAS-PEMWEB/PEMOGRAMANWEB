@@ -78,8 +78,7 @@ Artikel
                             <li><a href="{{ route('artikel.index') }}">Lihat Semua</a></li>
                         </ul>
                     </div>
-                </div>
-                
+                </div>  
                 <!-- /Categories -->
 
                 <!-- Latest Posts -->
