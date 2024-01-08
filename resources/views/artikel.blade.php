@@ -55,7 +55,6 @@ Artikel
 
                 <!-- Blog Sidebar -->
                 <div class="col-lg-4 col-md-12 blog-sidebar theiaStickySidebar">
-
                 <!-- Search -->
                 <div class="card search-widget">
                     <div class="card-body">
