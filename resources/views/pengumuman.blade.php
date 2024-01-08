@@ -129,7 +129,7 @@ Pengumuman
                         </div>
                         <!-- /Blog Sidebar -->
 
-                                                    </div>
+                    </div>
                 </div>
             </div>
         </div>
