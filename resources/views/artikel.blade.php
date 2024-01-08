@@ -91,7 +91,7 @@ Artikel
                                 <div class="post-thumb">
                                     <a href="{{ route('artikel.showartikel', ['id' => $artikelnew->id]) }}">
                                         <img class="img-fluid" src="{{ $artikelnew->url_file }}" alt="">
-                                    </a>
+                        </a>
                                 </div>
                                 <div class="post-info">
                                     <p>{{ $artikelnew->created_at->format('d M Y') }}</p>
