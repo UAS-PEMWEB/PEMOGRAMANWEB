@@ -47,7 +47,7 @@ class DaftarInformasiPublikController extends Controller
             'types' => $types
         ]);
     }
-    
+
     function update(Request $request, $id)
     {
 
