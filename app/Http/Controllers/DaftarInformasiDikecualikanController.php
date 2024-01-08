@@ -25,7 +25,7 @@ class DaftarInformasiDikecualikanController extends Controller
                 $query->where('name', 'daftar informasi dikecualikan');
             })
             ->first();
-            
+    
         return view('daftar-info-kecuali', [
             'data' => $data
         ]);
@@ -46,7 +46,7 @@ class DaftarInformasiDikecualikanController extends Controller
             'types' => $types
         ]);
     }
-
+    
     function update(Request $request, $id)
     {
 
