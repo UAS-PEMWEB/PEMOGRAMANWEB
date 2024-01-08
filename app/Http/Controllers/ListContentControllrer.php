@@ -39,6 +39,7 @@ class ListContentControllrer extends Controller
             'categories' => $categories
         ]);
     }
+    
     public function showByCategory($category)
     {
         $artikels = Content::latest()
