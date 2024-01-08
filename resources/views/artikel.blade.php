@@ -70,7 +70,6 @@ Artikel
                 <div class="card category-widget">
                     <div class="card-body">
                         <h4 class="side-title">Kategori Artikel</h4>
-
                         <ul class="categories">
                             @foreach($categories as $category)
                             <li><a href="{{ route('artikel.category', $category->name) }}">{{ $category->name }}</a>
@@ -80,6 +79,7 @@ Artikel
                         </ul>
                     </div>
                 </div>
+                
                 <!-- /Categories -->
 
                 <!-- Latest Posts -->
