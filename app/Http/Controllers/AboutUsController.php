@@ -1,10 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Content;
 use Illuminate\Http\Request;
-
 class AboutUsController extends Controller
 {
     function index()
@@ -27,7 +25,6 @@ class AboutUsController extends Controller
             $query->where('name', 'misi');
         })
         ->get();
-
         return view('about-us', [
             'data' => $profile,
             'visi' => $visi,

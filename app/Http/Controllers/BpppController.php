@@ -16,7 +16,6 @@ class BpppController extends Controller
     {
         $this->FirebaseMethods = $FirebaseMethods;
     }
-
     function index() {
         $bppp = Content::latest()
             ->with('category')
@@ -28,7 +27,6 @@ class BpppController extends Controller
             'data' => $bppp
         ]);
     }
-
     function bpppAdmin()
     {
         $categories = Category::all();
@@ -45,10 +43,8 @@ class BpppController extends Controller
             'types' => $types
         ]);
     }
-
     function update(Request $request, $id)
     {
-
         $data = Content::find($id);
 
         if ($request->file('file')) {

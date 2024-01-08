@@ -19,7 +19,7 @@ class ExcelController extends Controller
         $file->storeAs('uploads', $filename);
 
         // Perform any additional logic here, e.g., reading the Excel file
-
+        
         return redirect()->back()->with('success', 'Excel file uploaded successfully.');
     }
 }

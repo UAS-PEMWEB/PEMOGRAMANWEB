@@ -34,7 +34,6 @@ class ContentController extends Controller
             'data' => $data
         ]);
     }
-
     function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -50,7 +49,6 @@ class ContentController extends Controller
         Alert::success('SUCCESS', 'Data berhasil ditambahkan');
         return redirect('/admin/contents');
     }
-
     function destroy($id)
     {
         $data = Content::find($id);
@@ -60,7 +58,6 @@ class ContentController extends Controller
         Alert::success('SUCCESS', 'Data berhasil dihapus');
         return redirect('/admin/contents');
     }
-
     function edit($id){
         $categories = Category::all();
         $types = Type::all();
@@ -71,10 +68,8 @@ class ContentController extends Controller
             'types'=> $types 
         ]);
     }
-
     function update(Request $request, $id)
-    {
-       
+    {  
         $data = Content::find($id);
        
         if ($request->file('file')) {
@@ -117,7 +112,6 @@ class ContentController extends Controller
         })
         ->take(5)
         ->get();
-
         $categories = DB::table('contents')
             ->join('categories', 'contents.category_id', '=', 'categories.id')
             ->join('types', 'contents.type_id', '=', 'types.id')

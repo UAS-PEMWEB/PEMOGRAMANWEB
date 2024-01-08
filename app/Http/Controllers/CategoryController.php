@@ -20,11 +20,9 @@ class CategoryController extends Controller
             'data' => $data
         ]);
     }
-
     function create() {
         return view('admin.pages.categories.create');
     }
-
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -38,14 +36,14 @@ class CategoryController extends Controller
         Alert::success('SUCCESS', 'Data berhasil ditambahkan');
         return redirect('/admin/categories');
     }
-
+    
     function edit($id) {
         $data = Category::find($id);
         return view('admin.pages.categories.edit', [
             'data' => $data
         ]);
     }
-    
+
     function destroy($id) {
         $data = Category::find($id);
         $fileName = $this->FirebaseMethods->extractNameFromUrl($data->icon);
@@ -54,7 +52,6 @@ class CategoryController extends Controller
         Alert::success('SUCCESS', 'Data berhasil dihapus');
         return redirect('/admin/categories');
     }
-
     function update(Request $request, $id) {
         $data = Category::find($id);
         if ($request->file('fileicon')) {
