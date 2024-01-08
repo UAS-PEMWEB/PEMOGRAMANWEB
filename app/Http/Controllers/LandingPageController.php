@@ -237,5 +237,5 @@ class LandingPageController extends Controller
         ]);
     }
 
-
+    
 }
