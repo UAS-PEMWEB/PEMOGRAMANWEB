@@ -105,7 +105,7 @@ class LandingPageController extends Controller
             ->select('categories.*')
             ->distinct()
             ->get();
-    
+
         return view('pengumuman', [
             'allannouncements' => $allannouncements,
             'allannouncementpagination' => $allannouncementpagination,
