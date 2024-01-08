@@ -49,7 +49,6 @@ class ContentController extends Controller
         Alert::success('SUCCESS', 'Data berhasil ditambahkan');
         return redirect('/admin/contents');
     }
-
     function destroy($id)
     {
         $data = Content::find($id);
