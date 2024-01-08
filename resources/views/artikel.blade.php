@@ -106,7 +106,7 @@ Artikel
                             @endforeach
                         </ul>
                     </div>
-                </div>
+                                        </div>
                 <!-- /Latest Posts -->
             </div>
             <!-- /Blog Sidebar -->
