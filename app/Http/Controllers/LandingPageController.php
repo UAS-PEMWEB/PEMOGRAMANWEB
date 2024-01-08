@@ -192,7 +192,7 @@ class LandingPageController extends Controller
         })
         ->filter(request(['search']))
         ->paginate(5);
-        
+
     $categories = DB::table('contents')
         ->join('categories', 'contents.category_id', '=', 'categories.id')
         ->join('types', 'contents.type_id', '=', 'types.id')
@@ -200,7 +200,7 @@ class LandingPageController extends Controller
         ->select('categories.*')
         ->distinct()
         ->get();
-
+        
     return view('agenda', [
         'allagendas' => $allagendas,
         'categories' => $categories,
