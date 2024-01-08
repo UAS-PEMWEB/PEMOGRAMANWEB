@@ -67,7 +67,6 @@ class ListContentControllrer extends Controller
             ->select('categories.*')
             ->distinct()
             ->get();
-
         return view('list-content', [
             'artikels' => $artikels,
             'artikelpagination' => $artikelpagination,
