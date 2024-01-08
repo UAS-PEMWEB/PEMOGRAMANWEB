@@ -46,6 +46,7 @@ class ListVillageController extends Controller
         return view('admin.pages.list-villages.create');
     }
 
+    
     /**
      * Store a newly created resource in storage.
      */
