@@ -118,7 +118,7 @@ Pengumuman
                                                 </h4>
                                                 <p>Kategori: {{$allannouncement->category->name }}</p>
                                             </div>
-                                        </li>
+                                                    </li>
 
                                         @endforeach
                                     </ul>
