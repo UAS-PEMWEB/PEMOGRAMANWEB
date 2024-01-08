@@ -54,7 +54,7 @@ Pengumuman
                             <!-- /Blog Post -->
                             @endforeach
 
-
+                            
                             <!-- Blog Pagination -->
                             <div class="blog-pagination">
                                 {{ $allannouncements->links() }}
