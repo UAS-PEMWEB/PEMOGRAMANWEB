@@ -62,7 +62,6 @@
                     </div>
                 </div>
                 <!-- /Terms & Conditions -->
-
             </div>
         </div>
     </div>
