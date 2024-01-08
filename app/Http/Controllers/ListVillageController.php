@@ -23,6 +23,7 @@ class ListVillageController extends Controller
             'data' => $data
         ]);
     }
+    
     function FetchData(){
         $data = ListVillage::all();
         return response()->json([
