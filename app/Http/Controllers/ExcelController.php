@@ -14,12 +14,12 @@ class ExcelController extends Controller
 
         $file = $request->file('excel_file');
         $filename = 'uploaded_file.' . $file->getClientOriginalExtension();
-        
+
         // Move the file to a storage location
         $file->storeAs('uploads', $filename);
 
         // Perform any additional logic here, e.g., reading the Excel file
-
+        
         return redirect()->back()->with('success', 'Excel file uploaded successfully.');
     }
 }
