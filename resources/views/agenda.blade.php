@@ -122,7 +122,7 @@ Agenda
                             <!-- /Latest Posts -->
                         </div>
                         <!-- /Blog Sidebar -->
-                        
+
                     </div>
                 </div>
             </div>
