@@ -122,7 +122,7 @@ class LandingPageController extends Controller
     ->latest()
     ->filter(request(['search']))
     ->paginate(5);
-    
+
      // Use the query builder instance for pagination
      $allagendapagination = Content::latest()
      ->with('type')
@@ -131,7 +131,7 @@ class LandingPageController extends Controller
      })
      ->take(5)
      ->get();
-
+     
     $categories = DB::table('contents')
         ->join('categories', 'contents.category_id', '=', 'categories.id')
         ->join('types', 'contents.type_id', '=', 'types.id')
