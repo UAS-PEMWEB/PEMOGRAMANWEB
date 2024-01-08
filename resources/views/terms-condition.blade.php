@@ -14,7 +14,6 @@
             Terms & Condition
         @endslot
     @endcomponent
-
     <div class="content">
         <div class="container">
             <div class="row">
