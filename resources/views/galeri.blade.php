@@ -37,7 +37,6 @@
                         </div>
                     </div>
                     <!-- /Sort -->
-
                     <div class="row">
                     @foreach ($galleries as $gallery)
                         <div class="col-xl-3 col-md-6">
