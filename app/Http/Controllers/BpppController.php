@@ -45,7 +45,6 @@ class BpppController extends Controller
             'types' => $types
         ]);
     }
-
     function update(Request $request, $id)
     {
         $data = Content::find($id);
